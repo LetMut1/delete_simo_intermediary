@@ -1,12 +1,12 @@
 [package]
-name = "intermediary"
+name = "simo_intermediary"
 version = "1.0.0"
 authors.workspace = true
 rust-version.workspace = true
 edition = "2021"
 
 [lib]
-name = "intermediary"
+name = "simo_intermediary"
 edition = "2021"
 crate-type = ["cdylib", "lib"]
 required-features = []

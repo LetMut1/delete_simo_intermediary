@@ -11,7 +11,7 @@ name = "client"
 [dependencies]
 borsh = { workspace = true }
 clap = { package = "clap", version = "=4.5.17", default-features = true, features = ["cargo"], optional = false }
-intermediary = { package = "intermediary", path = "./../program", version = "1.0.0", default-features = true, features = ["no-entrypoint"], optional = false }
+simo_intermediary = { package = "simo_intermediary", path = "./../program", version = "1.0.0", default-features = true, features = ["no-entrypoint"], optional = false }
 serde = { package = "serde", version = "1.0.145", default-features = true, features = [], optional = false }
 serde_json = { package = "serde_json", version = "1.0.140", default-features = true, features = [], optional = false }
 solana_program = { workspace = true }

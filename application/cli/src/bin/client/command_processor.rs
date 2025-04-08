@@ -1,5 +1,5 @@
 use {
-    intermediary::{
+    simo_intermediary::{
         FEE_CHANGE_MANAGER,
         FEE_CHANGE_TRADER,
         FEE_DEPOSIT_FUNDS,

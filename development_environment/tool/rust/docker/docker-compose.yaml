@@ -1,0 +1,18 @@
+services:
+    rust_stable_toolchain:
+        container_name: simo_intermediary_rust_stable_toolchain
+        build:
+            context: ./service/rust_stable_toolchain/
+            dockerfile: dockerfile
+        environment:
+            USER: ${USER}
+        volumes:
+            - ./../../../../:/simo_intermediary
+        working_dir: /simo_intermediary
+        restart: always
+        tty: true
+        init: true
+networks:
+    default:
+        name: simo_intermediary
+        driver: bridge

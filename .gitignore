@@ -1,0 +1,4 @@
+# Not important. For developer:
+.vscode
+# Important. For application:
+target

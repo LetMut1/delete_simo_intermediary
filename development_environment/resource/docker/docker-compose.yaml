@@ -1,0 +1,15 @@
+services:
+    solana:
+        container_name: simo_intermediary_solana
+        build:
+            context: ./service/solana
+            dockerfile: dockerfile
+        volumes:
+            - ./../../../:/simo_intermediary
+        restart: always
+        tty: true
+        init: true
+networks:
+    default:
+        external: true
+        name: simo_intermediary

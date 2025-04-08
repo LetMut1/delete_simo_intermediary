@@ -1,0 +1,30 @@
+[workspace]
+resolver = "2"
+members = [
+    "./cli",
+    "./program",
+]
+default-members = [
+    "./cli",
+    "./program",
+]
+
+[workspace.package]
+authors = ["Zimin Dmitriy <dmitriy@deepwaters.capital>"]
+rust-version = "1.79.0"
+
+[workspace.dependencies]
+borsh = { package = "borsh", version = "1.5.3", default-features = true, features = [], optional = false }
+solana_program = { package = "solana-program", version = "=2.1.15", default-features = true, features = [], optional = false }
+spl_token = { package = "spl-token", version = "6.0.0", default-features = true, features = ["no-entrypoint"], optional = false }
+
+[profile.release]
+opt-level = 3
+debug = false
+debug-assertions = false
+overflow-checks = true
+lto = "fat"
+panic = "unwind"
+incremental = false
+codegen-units = 1
+rpath = false

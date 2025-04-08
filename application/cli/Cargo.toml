@@ -1,0 +1,20 @@
+[package]
+name = "client"
+version = "1.0.0"
+authors.workspace = true
+rust-version.workspace = true
+edition = "2021"
+
+[[bin]]
+name = "client"
+
+[dependencies]
+borsh = { workspace = true }
+clap = { package = "clap", version = "=4.5.17", default-features = true, features = ["cargo"], optional = false }
+intermediary = { package = "intermediary", path = "./../program", version = "1.0.0", default-features = true, features = ["no-entrypoint"], optional = false }
+serde = { package = "serde", version = "1.0.145", default-features = true, features = [], optional = false }
+serde_json = { package = "serde_json", version = "1.0.140", default-features = true, features = [], optional = false }
+solana_program = { workspace = true }
+solana_rpc_client = { package = "solana-rpc-client", version = "=2.1.15", default-features = true, features = [], optional = false }
+solana_sdk = { package = "solana-sdk", version = "=2.1.15", default-features = true, features = [], optional = false }
+spl_token = { workspace = true }

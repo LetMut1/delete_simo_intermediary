@@ -1,0 +1,25 @@
+[package]
+name = "intermediary"
+version = "1.0.0"
+authors.workspace = true
+rust-version.workspace = true
+edition = "2021"
+
+[lib]
+name = "intermediary"
+edition = "2021"
+crate-type = ["cdylib", "lib"]
+required-features = []
+
+[features]
+default = []
+no-entrypoint = []
+
+[dependencies]
+borsh = { workspace = true }
+num_derive = { package = "num-derive", version = "0.4.2", default-features = true, features = [], optional = false }
+num_traits = { package = "num-traits", version = "0.2.19", default-features = true, features = [], optional = false }
+solana_program = { workspace = true }
+spl_token = { workspace = true }
+spl-associated-token-account = { package = "spl-associated-token-account", version = "6.0.0", default-features = true, features = ["no-entrypoint"], optional = false }
+thiserror = { package = "thiserror", version = "2.0.9", default-features = true, features = [], optional = false }
